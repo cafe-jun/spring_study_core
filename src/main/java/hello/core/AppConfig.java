@@ -17,7 +17,7 @@ public class AppConfig {
         return new MemberServiceImpl(getMemberRepository());
     }
     @Bean
-    private MemoryMemberRepository getMemberRepository() {
+    public MemoryMemberRepository getMemberRepository() {
         return new MemoryMemberRepository();
     }
     @Bean
@@ -25,7 +25,7 @@ public class AppConfig {
         return new OrderServiceImpl(getMemberRepository(), getDiscountPolicy());
     }
     @Bean
-    private FixDiscountPolicy getDiscountPolicy() {
+    public FixDiscountPolicy getDiscountPolicy() {
         return new FixDiscountPolicy();
     }
 
