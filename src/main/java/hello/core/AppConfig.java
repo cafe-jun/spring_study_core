@@ -26,7 +26,8 @@ public class AppConfig {
     @Bean
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
-        return new OrderServiceImpl(memberRepository(), getDiscountPolicy());
+//        return new OrderServiceImpl(memberRepository(), getDiscountPolicy());
+        return null;
     }
     @Bean
     public FixDiscountPolicy getDiscountPolicy() {
