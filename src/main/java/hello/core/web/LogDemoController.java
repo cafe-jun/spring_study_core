@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class LogDemoController {
 
     private final LogDemoService logDemoService;
+
     private final MyLogger myLogger;
 //    private final ObjectProvider<MyLogger> myLoggerProvider;
 
@@ -24,7 +25,7 @@ public class LogDemoController {
     public String logDemo(HttpServletRequest request) {
         String requestURL = request.getRequestURL().toString();
 //        MyLogger myLogger = myLoggerProvider.getObject();
-
+        System.out.println("myLogger = " + myLogger.getClass());
         myLogger.setRequestURL(requestURL);
         myLogger.log("controller test");
         logDemoService.logic("testId");
